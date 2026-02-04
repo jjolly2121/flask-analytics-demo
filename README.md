@@ -1,11 +1,13 @@
-# flask-analytics-demo
-
 # Flask-Based Analytics Visualization Demo
 
 ## Overview
 This project demonstrates how analytical outputs can be exposed to end users through a lightweight web interface. Using Flask, I built a small application that accepts user input, processes it in Python, and returns a dynamically generated visualization.
 
 The focus of this project is not model complexity, but understanding how data flows through a system and how insights are presented in a human-readable way.
+
+## Role Alignment
+This project reflects the core responsibilities of a Solutions Engineer: translating technical analytics into clear, customer-facing insights while maintaining backend rigor and system reliability.
+
 
 ## What This Demonstrates
 - Translating user input into structured data
@@ -31,4 +33,17 @@ The focus of this project is not model complexity, but understanding how data fl
 - Designing for explainability improves communication between technical and non-technical users
 
 ## Notes
-This prototype was developed for rapid iteration. In a production environment, the application would be deployed as a standalone service with proper validation, logging, and monitoring.
+This prototype was developed for rapid iteration and clarity. In a production environment, the application would be deployed as a standalone service with enhanced input validation, structured logging, monitoring, and security controls.
+
+
+
+### Example Output
+
+<img width="977" height="814" alt="image" src="https://github.com/user-attachments/assets/ef05bc6a-4394-4f23-9946-fc129c18ddff" />
+
+
+The interface allows users to input categorical data and numerical values.
+These inputs are processed server-side and returned as a dynamically generated visualization.
+
+This mirrors how analytical insights are commonly surfaced to business users:
+simple inputs, clear outputs, and minimal technical friction.
