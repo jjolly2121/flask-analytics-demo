@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Analytics Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <h1>Flask-Based Analytics Demo</h1>
+    <p>Enter categories and values to generate a dynamic visualization.</p>
+
+    <form method="POST">
+        <div>
+            <label>Categories (comma-separated)</label><br>
+            <input type="text" name="categories" placeholder="A, B, C" required>
+        </div>
+
+        <br>
+
+        <div>
+            <label>Values (comma-separated integers)</label><br>
+            <input type="text" name="values" placeholder="10, 20, 30" required>
+        </div>
+
+        <br>
+
+        <button type="submit">Generate Chart</button>
+    </form>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% if chart_url %}
+        <div class="chart-container">
