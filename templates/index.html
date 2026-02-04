@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Flask Analytics Demo</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
@@ -8,25 +9,26 @@
 
     <h1>Data Visualization with Flask</h1>
 
-    <form method="POST" action="/">
+    <form method="POST">
         <div>
-            <label>Categories (comma-separated):</label><br>
+            <label>Categories (comma-separated)</label><br>
             <input type="text" name="categories" placeholder="A,B,C" required>
         </div>
 
         <div>
-            <label>Values (comma-separated):</label><br>
+            <label>Values (comma-separated)</label><br>
             <input type="text" name="values" placeholder="10,20,30" required>
         </div>
 
+        <br>
         <button type="submit">Generate Bar Chart</button>
     </form>
 
-    <div class="chart-container">
-        {% if chart_url %}
-            <img src="data:image/png;base64,{{ chart_url }}" alt="Bar Chart">
-        {% endif %}
-    </div>
+    {% if chart_url %}
+        <hr>
+        <h2>Generated Chart</h2>
+        <img src="data:image/png;base64,{{ chart_url }}" alt="Bar Chart">
+    {% endif %}
 
 </body>
 </html>
